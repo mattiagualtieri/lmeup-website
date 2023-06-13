@@ -1,2 +1,2 @@
-# lmeup-reservation-system
-Reservation System for #LEMILLEEUNAPOLLI
+# LMEUP Website
+#LEMILLEEUNAPOLLI's website
