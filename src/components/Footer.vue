@@ -1,10 +1,5 @@
 <template>
   <nav>
-    <div class="logo">
-        <RouterLink to="/">
-            <img src="../assets/logo.png" alt="LMEUP">
-        </RouterLink>
-    </div>
     <ul class="links">
         <li><RouterLink to="/" class="link">Home</RouterLink></li>
         <li><span class="sep">|</span></li>
@@ -22,22 +17,10 @@
 
 nav {
     background-color: #0b4b03;
-    padding: 5px 0px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     width: auto;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-nav .logo {
-    flex: 1;
-}
-
-nav .logo img {
-    width: 70px;
-    margin-left: 20px;
 }
 
 .links {
@@ -60,7 +43,7 @@ nav .link:hover {
 .links li {
     color: white;
     padding: 15px 10px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .sep {
