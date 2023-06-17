@@ -18,13 +18,14 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 nav {
     background-color: #0b4b03;
     padding: 5px 20px;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: auto;
 }
 
 nav .logo {
@@ -45,7 +46,7 @@ nav .logo img {
 
 nav .link {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 
