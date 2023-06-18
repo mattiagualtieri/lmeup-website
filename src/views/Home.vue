@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <p class="title">
-      <h1>Benvenuto nel sito di <br> 
+      <h1>Benvenuto nel nostro sito <br> 
         <span class="highlight">#LEMILLEEUNAPOLLI</span>
       </h1>
     </p>

@@ -1,5 +1,6 @@
 <template>
-  <nav>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <nav>
     <div class="logo">
         <RouterLink to="/">
             <img src="../assets/logo.png" alt="LMEUP">
@@ -14,8 +15,37 @@
         <li><span class="sep">|</span></li>
         <li><RouterLink to="/about" class="link">About</RouterLink></li>
     </ul>
+    <span class="hamburger" @click="drawerVisible=true">
+        <span class="material-icons md-18">menu</span>
+    </span>
   </nav>
+  <div class="sidenav"
+        :style="{
+            width: drawerVisible? '40vw' : '0',
+            paddingLeft: drawerVisible? '10px' : '0',
+        }"
+    >
+        <span class="close-button" @click="drawerVisible=false">
+            <span class="material-icons">close</span>
+        </span>
+        <ul class="sidenav-links">
+            <li><RouterLink to="/" class="link">Home</RouterLink></li>
+            <li><RouterLink to="/eventi" class="link">Eventi</RouterLink></li>
+            <li><RouterLink to="/brand" class="link">Brand</RouterLink></li>
+            <li><RouterLink to="/about" class="link">About</RouterLink></li>
+        </ul>
+    </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      drawerVisible: false
+    }
+  }
+}
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -65,6 +95,55 @@ nav .link:hover {
 
 .sep {
     color: #073102;
+}
+
+.hamburger {
+    display: none;
+    margin-right: 30px;
+    color: white;
+}
+
+.sidenav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  height: 100vh;
+  padding-left: 0;
+  background: #0b4b03;
+  z-index: 200;
+  transition: all 0.2s;
+}
+
+.close-button {
+    color: white;
+}
+
+.sidenav-links {
+    align-items: center;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.sidenav-links li {
+    margin-top: 10px;
+}
+
+.sidenav .link {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 700px) {
+    .links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
 }
 
 </style>

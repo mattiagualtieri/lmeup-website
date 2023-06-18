@@ -10,6 +10,10 @@ import Footer from './components/Footer.vue'
   <!--Footer /-->
 </template>
 
+<script>
+
+</script>
+
 <style scoped>
 
 </style>
