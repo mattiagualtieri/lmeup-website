@@ -1,149 +1,158 @@
 <template>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <nav>
-    <div class="logo">
-        <RouterLink to="/">
-            <img src="../assets/logo.png" alt="LMEUP">
-        </RouterLink>
-    </div>
-    <ul class="links">
-        <li><RouterLink to="/" class="link">Home</RouterLink></li>
-        <li><span class="sep">|</span></li>
-        <li><RouterLink to="/eventi" class="link">Eventi</RouterLink></li>
-        <li><span class="sep">|</span></li>
-        <li><RouterLink to="/brand" class="link">Brand</RouterLink></li>
-        <li><span class="sep">|</span></li>
-        <li><RouterLink to="/about" class="link">About</RouterLink></li>
-    </ul>
-    <span class="hamburger" @click="drawerVisible=true">
-        <span class="material-icons md-18">menu</span>
-    </span>
-  </nav>
-  <div class="sidenav"
-        :style="{
-            width: drawerVisible? '40vw' : '0',
-            paddingLeft: drawerVisible? '10px' : '0',
-        }"
-    >
-        <span class="close-button" @click="drawerVisible=false">
-            <span class="material-icons">close</span>
-        </span>
-        <ul class="sidenav-links">
-            <li><RouterLink to="/" class="link">Home</RouterLink></li>
-            <li><RouterLink to="/eventi" class="link">Eventi</RouterLink></li>
-            <li><RouterLink to="/brand" class="link">Brand</RouterLink></li>
-            <li><RouterLink to="/about" class="link">About</RouterLink></li>
-        </ul>
-    </div>
-</template>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Home" />
+      </div>
+      <div class="menu-toggle" @click="toggleMenu">
+        <font-awesome-icon icon="fa-solid fa-bars" size="lg" style="color: #ffffff;" />
 
-<script>
-export default {
-  data() {
-    return {
-      drawerVisible: false
-    }
+
+      </div>
+      <div class="sidenav" :class="{ open: isMenuOpen }" ref="sidenav">
+        <ul>
+          <li>
+            <router-link to="/" @click="closeMenu">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/eventi" @click="closeMenu">Eventi</router-link>
+          </li>
+          <li>
+            <router-link to="/brand" @click="closeMenu">Brand</router-link>
+          </li>
+          <li>
+            <router-link to="/about" @click="closeMenu">About</router-link>
+          </li>
+        </ul>
+        <button class="close-button" @click="closeMenu">Close</button>
+      </div>
+    </nav>
+  </template>
+  
+  <script>
+  export default {
+    name: 'Navbar',
+    data() {
+      return {
+        isMenuOpen: false,
+      };
+    },
+    mounted() {
+      document.addEventListener('click', this.handleClickOutside);
+    },
+    beforeDestroy() {
+      document.removeEventListener('click', this.handleClickOutside);
+    },
+    methods: {
+      toggleMenu(event) {
+        this.isMenuOpen = !this.isMenuOpen;
+        event.stopPropagation(); // Stop the click event from propagating
+      },
+      closeMenu() {
+        this.isMenuOpen = false;
+      },
+      handleClickOutside(event) {
+        if (
+          this.$refs.sidenav &&
+          !this.$refs.sidenav.contains(event.target) &&
+          this.isMenuOpen
+        ) {
+          this.closeMenu();
+        }
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  nav {
+    background-color: #0b4b03;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    margin-right: 20px;
+  }
+
+ .logo img {
+    width: 60px;
+
+}
+  
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .sidenav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #083803;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .sidenav.open {
+    right: 0; /* Adjust the value as needed */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+  }
+  
+  a:hover {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .close-button {
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+   
+    .logo {
+    margin-right: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidenav {
+    padding: 10px;
   }
 }
-</script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-nav {
-    background-color: #0b4b03;
-    padding: 5px 0px;
-    display: flex;
-    align-items: center;
-    width: auto;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-nav .logo {
-    flex: 1;
-}
-
-nav .logo img {
-    width: 70px;
-    margin-left: 20px;
-}
-
-.links {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-right: 30px;
-}
-
-nav .link {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-}
-
-nav .link:hover {
-    color: rgb(213, 213, 213);
-}
-
-.links li {
-    color: white;
-    padding: 15px 10px;
-    font-size: 18px;
-}
-
-.sep {
-    color: #073102;
-}
-
-.hamburger {
-    display: none;
-    margin-right: 30px;
-    color: white;
-}
-
-.sidenav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-  height: 100vh;
-  padding-left: 0;
-  background: #0b4b03;
-  z-index: 200;
-  transition: all 0.2s;
-}
-
-.close-button {
-    color: white;
-}
-
-.sidenav-links {
-    align-items: center;
-    list-style: none;
-    margin-top: 60px;
-}
-
-.sidenav-links li {
-    margin-top: 10px;
-}
-
-.sidenav .link {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-@media screen and (max-width: 700px) {
-    .links {
-        display: none;
-    }
-    .hamburger {
-        display: flex;
-    }
-}
-
 </style>
