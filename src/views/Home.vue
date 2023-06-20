@@ -21,7 +21,7 @@
       <h2><span>&#128085;</span> Scopri il nostro brand</h2>
     </p>
     <RouterLink to="/">
-      <button class="subtitle-button">Scopri</button>
+      <button class="subtitle-button" style="margin-bottom: 300px;">Scopri</button>
     </RouterLink>
   </div>
 </template>
@@ -47,6 +47,7 @@ export default {
 
 .title {
   font-size: 24px;
+  font-weight: bold;
   font-family: 'Poppins', sans-serif;
   margin: auto;
 }
@@ -83,4 +84,29 @@ export default {
   color: white;
 }
 
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+  .subtitle-button {
+    background-color: white; 
+    border: 2px solid #0b4b03;
+    border-radius: 12px;
+    color: #0b4b03;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+}
 </style>

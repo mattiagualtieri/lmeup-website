@@ -5,10 +5,11 @@
       </div>
       <div class="menu-toggle" @click="toggleMenu">
         <font-awesome-icon icon="fa-solid fa-bars" size="lg" style="color: #ffffff;" />
-
-
       </div>
       <div class="sidenav" :class="{ open: isMenuOpen }" ref="sidenav">
+        <span class="close-button" @click="closeMenu">
+          <font-awesome-icon icon="fa-solid fa-xmark" size="xl" style="color: #ffffff;" />
+        </span>
         <ul>
           <li>
             <router-link to="/" @click="closeMenu">Home</router-link>
@@ -23,136 +24,120 @@
             <router-link to="/about" @click="closeMenu">About</router-link>
           </li>
         </ul>
-        <button class="close-button" @click="closeMenu">Close</button>
       </div>
     </nav>
   </template>
   
-  <script>
-  export default {
-    name: 'Navbar',
-    data() {
-      return {
-        isMenuOpen: false,
-      };
+<script>
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
+  mounted() {
+    document.addEventListener('click', this.handleClickOutside);
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.handleClickOutside);
+  },
+  methods: {
+    toggleMenu(event) {
+      this.isMenuOpen = !this.isMenuOpen;
+      event.stopPropagation(); // Stop the click event from propagating
     },
-    mounted() {
-      document.addEventListener('click', this.handleClickOutside);
+    closeMenu() {
+      this.isMenuOpen = false;
     },
-    beforeDestroy() {
-      document.removeEventListener('click', this.handleClickOutside);
+    handleClickOutside(event) {
+      if (
+        this.$refs.sidenav &&
+        !this.$refs.sidenav.contains(event.target) &&
+        this.isMenuOpen
+      ) {
+        this.closeMenu();
+      }
     },
-    methods: {
-      toggleMenu(event) {
-        this.isMenuOpen = !this.isMenuOpen;
-        event.stopPropagation(); // Stop the click event from propagating
-      },
-      closeMenu() {
-        this.isMenuOpen = false;
-      },
-      handleClickOutside(event) {
-        if (
-          this.$refs.sidenav &&
-          !this.$refs.sidenav.contains(event.target) &&
-          this.isMenuOpen
-        ) {
-          this.closeMenu();
-        }
-      },
-    },
-  };
-  </script>
+  },
+};
+</script>
   
-  <style scoped>
-  nav {
-    background-color: #0b4b03;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo {
-    margin-right: 20px;
-  }
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
- .logo img {
-    width: 60px;
-
+nav {
+  background-color: #0b4b03;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
   
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 20px;
-    cursor: pointer;
-  }
-  
-  .sidenav {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 250px;
-    height: 100%;
-    background-color: #083803;
-    transition: right 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  
-  .sidenav.open {
-    right: 0; /* Adjust the value as needed */
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #fff;
-    padding: 5px;
-  }
-  
-  a:hover {
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
-  .close-button {
-    background-color: #f2f2f2;
-    color: #333;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
-   
-    .logo {
-    margin-right: 10px;
-  }
+.logo {
+  margin-right: 20px;
+}
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .sidenav {
-    padding: 10px;
-  }
+.logo img {
+  width: 60px;
+}
+  
+.menu-toggle {
+  display: block;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+  
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 40vw;
+  height: 100%;
+  background-color: #083803;
+  transition: right 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+  
+.sidenav.open {
+  right: 0;
+}
+  
+ul {
+  list-style-type: none;
+  margin-top: 32px;
+  padding: 0;
+}
+  
+li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+  
+a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+  
+a:hover {
+  color: rgb(204, 204, 204);
+}
+  
+.close-button {
+  margin-top: 10px;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: auto;
+}
+  
+.close-button:hover {
+  background-color: #333;
+  color: #fff;
 }
 </style>
