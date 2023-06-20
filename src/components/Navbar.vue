@@ -1,7 +1,9 @@
 <template>
     <nav>
       <div class="logo">
-        <img src="../assets/logo.png" alt="Home" />
+        <router-link to="/" @click="closeMenu">
+          <img src="../assets/logo.png" alt="Home" />
+        </router-link>
       </div>
       <div class="menu-toggle" @click="toggleMenu">
         <font-awesome-icon icon="fa-solid fa-bars" size="lg" style="color: #ffffff;" />
@@ -19,6 +21,9 @@
           </li>
           <li>
             <router-link to="/brand" @click="closeMenu">Brand</router-link>
+          </li>
+          <li>
+            <router-link to="/faq" @click="closeMenu">FAQs</router-link>
           </li>
           <li>
             <router-link to="/about" @click="closeMenu">About</router-link>
@@ -74,11 +79,11 @@ nav {
   justify-content: center;
   position: sticky;
   top: 0;
-  left: 0;;
+  left: 0;
 }
   
 .logo {
-  margin-right: 20px;
+  margin: auto;
 }
 
 .logo img {
@@ -119,7 +124,7 @@ ul {
 li {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
   
 a {

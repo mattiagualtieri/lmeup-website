@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <p class="title">
-      <h1>Benvenuto nel nostro sito <br> 
+      <h1>Benvenuto!<br> 
         <span class="highlight">#LEMILLEEUNAPOLLI</span>
       </h1>
     </p>
@@ -20,8 +20,14 @@
     <p class="subtitle">
       <h2><span>&#128085;</span> Scopri il nostro brand</h2>
     </p>
-    <RouterLink to="/">
-      <button class="subtitle-button" style="margin-bottom: 300px;">Scopri</button>
+    <RouterLink to="/brand">
+      <button class="subtitle-button">Scopri</button>
+    </RouterLink>
+    <p class="subtitle">
+      <h2><span>&#10067;</span> Hai domande?</h2>
+    </p>
+    <RouterLink to="/faq">
+      <button class="subtitle-button" style="margin-bottom: 300px;">FAQs</button>
     </RouterLink>
   </div>
 </template>
@@ -43,6 +49,8 @@ export default {
 .content {
   align-items: center;
   text-align: center;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .title {
@@ -60,7 +68,7 @@ export default {
   font-size: 24px;
   font-family: 'Poppins', sans-serif;
   margin: auto;
-  margin-top: 48px;
+  margin-top: 42px;
 }
 
 .subtitle-button {
@@ -94,19 +102,7 @@ export default {
     font-size: 14px;
   }
   .subtitle-button {
-    background-color: white; 
-    border: 2px solid #0b4b03;
-    border-radius: 12px;
-    color: #0b4b03;
-    font-family: 'Poppins', sans-serif;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 12px;
-    font-weight: bold;
-    transition-duration: 0.4s;
-    cursor: pointer;
   }
 }
 </style>
