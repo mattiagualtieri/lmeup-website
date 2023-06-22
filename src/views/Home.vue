@@ -1,3 +1,7 @@
+<script setup>
+import PhotosLink from '../components/PhotosLink.vue'
+</script>
+
 <template>
   <div class="content">
     <p class="title">
@@ -23,6 +27,10 @@
     <RouterLink to="/brand">
       <button class="subtitle-button">Scopri</button>
     </RouterLink>
+    <p class="subtitle">
+      <h2><span>&#128248;</span> Foto del 09/06/2023</h2>
+    </p>
+    <PhotosLink />
     <p class="subtitle">
       <h2><span>&#10067;</span> Hai domande?</h2>
     </p>
