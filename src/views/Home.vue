@@ -22,15 +22,15 @@ import PhotosLink from '../components/PhotosLink.vue'
       <button class="subtitle-button">Prenota qui</button>
     </RouterLink>
     <p class="subtitle">
+      <h2><span>&#128248;</span> Foto del 09/06/2023</h2>
+    </p>
+    <PhotosLink :link="photosLink"></PhotosLink>
+    <p class="subtitle">
       <h2><span>&#128085;</span> Scopri il nostro brand</h2>
     </p>
     <RouterLink to="/brand">
       <button class="subtitle-button">Scopri</button>
     </RouterLink>
-    <p class="subtitle">
-      <h2><span>&#128248;</span> Foto del 09/06/2023</h2>
-    </p>
-    <PhotosLink />
     <p class="subtitle">
       <h2><span>&#10067;</span> Hai domande?</h2>
     </p>
@@ -44,7 +44,8 @@ import PhotosLink from '../components/PhotosLink.vue'
 export default {
   data() {
     return {
-      nextEvent: '21/07/2023'
+      nextEvent: '21/07/2023',
+      photosLink: 'https://drive.google.com/drive/folders/1qzwqzbePEwxHWZ41J0hNqYhg6E8bcRps'
     }
   }
 }
