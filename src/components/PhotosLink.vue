@@ -25,7 +25,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .image-container {
   height: 200px;
-  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("../assets/20230906-2.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("../assets/20230906.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
