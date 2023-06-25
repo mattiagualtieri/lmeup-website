@@ -1,7 +1,7 @@
 <template>
   <div class="image-container">
     <a :href="link">
-      <button>Vai al drive</button>
+      <button>{{ title }}</button>
     </a>
   </div>
 </template>
@@ -9,6 +9,10 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      required: true
+    },
     link: {
       type: String,
       required: true

@@ -24,7 +24,7 @@ import PhotosLink from '../components/PhotosLink.vue'
     <p class="subtitle">
       <h2><span>&#128248;</span> Foto del 09/06/2023</h2>
     </p>
-    <PhotosLink :link="photosLink"></PhotosLink>
+    <PhotosLink :link="photosLink" :title="photosTitle"></PhotosLink>
     <p class="subtitle">
       <h2><span>&#128085;</span> Scopri il nostro brand</h2>
     </p>
@@ -45,6 +45,7 @@ export default {
   data() {
     return {
       nextEvent: '21/07/2023',
+      photosTitle: 'Vai al drive',
       photosLink: 'https://drive.google.com/drive/folders/1qzwqzbePEwxHWZ41J0hNqYhg6E8bcRps'
     }
   }
