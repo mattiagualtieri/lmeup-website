@@ -1,13 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMEUP</title>
-  </head>
-  <body style="margin: 0">
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html lang="en-US">
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href="style.css" rel="stylesheet">
+        <link href="style2.css" rel="stylesheet">
+        <link href="style3.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <title>LMEUP</title>
+        <!-- ICONS: https://www.flaticon.com/icon-fonts-most-downloaded (24px) -->
+        <script>
+            function openSidenav() {
+              document.getElementById("sidenav").style.width = "100%";
+              document.getElementById("sidenav-link-container").style.display = "flex";
+            }
+            
+            function closeSidenav() {
+              document.getElementById("sidenav").style.width = "0%";
+              document.getElementById("sidenav-link-container").style.display = "none";
+            }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const elements = document.querySelectorAll(".fadable");
+
+                function fadeInElements() {
+                    elements.forEach(element => {
+                        if (isElementInViewport(element)) {
+                            element.classList.add("fade-in");
+                        }
+                    });
+                }
+
+                function isElementInViewport(el) {
+                    const rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight + 400 || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
+
+                // Initial check in case some elements are already in the viewport when the page loads
+                fadeInElements();
+
+                // Add event listener to check for elements when scrolling
+                window.addEventListener("scroll", fadeInElements);
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="desktop-navigation">
+                    <ul class="navigation">
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#"><img src="logo_black.png" class="logo"></a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-navigation">
+                    <a href="#"><img src="logo_black.png" class="logo"></a>
+                    <a href="javascript:void(0);" class="hamburger" onclick="openSidenav()"><img src="hamburger.png"></a>
+                </nav>
+            </div>
+        </header>
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="close-sidenav-button" onclick="closeSidenav()"><img src="close.png"></a>
+            <div id="sidenav-link-container" class="sidenav-link-container">
+                <ul class="sidenav-links">
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Video -->
+        <div class="video">
+            <video muted="" autoplay="" loop="" playsinline="" controls="" poster="">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Upcoming events -->
+        <div class="section-title">
+            <h2>Upcoming events</h2>
+        </div>
+        <div class="coming-soon-title fadable">
+            Coming soon...
+        </div>
+        <div class="event-container hidden-event fadable">
+            <div class="event">
+                <div class="banner"></div>
+                <div class="event-right-content">
+                    <div class="info">
+                        <div class="event-title">
+                            September LMEUP
+                        </div>
+                        <div class="event-date">
+                            September 08, 2023
+                        </div>
+                        <div class="event-location">
+                            Modena, Via Tonini 5
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button white-button disabled">Reserve entrance</button>
+                        <button class="button green-button">More info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Past events -->
+        <div class="section-title">
+            <h2>Past events</h2>
+        </div>
+        <div class="event-container fadable">
+            <div class="event">
+                <div class="banner banner1"></div>
+                <div class="event-right-content">
+                    <div class="info">
+                        <div class="event-title">
+                            September LMEUP
+                        </div>
+                        <div class="event-date">
+                            September 08, 2023
+                        </div>
+                        <div class="event-location">
+                            Modena, Via Tonini 5
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button white-button disabled">Leave a feedback</button>
+                        <button class="button green-button">See photos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event-container fadable">
+            <div class="event">
+                <div class="banner banner2"></div>
+                <div class="event-right-content">
+                    <div class="info">
+                        <div class="event-title">
+                            July LMEUP
+                        </div>
+                        <div class="event-date">
+                            July 21, 2023
+                        </div>
+                        <div class="event-location">
+                            Modena, Via Tonini 5
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button white-button disabled">Leave a feedback</button>
+                        <button class="button green-button">See photos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event-container fadable">
+            <div class="event">
+                <div class="banner banner3"></div>
+                <div class="event-right-content">
+                    <div class="info">
+                        <div class="event-title">
+                            June LMEUP
+                        </div>
+                        <div class="event-date">
+                            June 09, 2023
+                        </div>
+                        <div class="event-location">
+                            Modena, Via Tonini 5
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button white-button disabled">Leave a feedback</button>
+                        <button class="button green-button">See photos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event-container fadable">
+            <div class="event">
+                <div class="banner banner2"></div>
+                <div class="event-right-content">
+                    <div class="info">
+                        <div class="event-title">
+                            July LMEUP
+                        </div>
+                        <div class="event-date">
+                            July 21, 2023
+                        </div>
+                        <div class="event-location">
+                            Modena, Via Tonini 5
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button white-button disabled">Leave a feedback</button>
+                        <button class="button green-button">See photos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="past-events-button">
+            <button class="button white-button fadable">See past events</button>
+        </div>
+        <div class="footer">
+            <div class="socials">
+                Follow us on Instagram <a href="#" class="instagram-link"><img src="instagram.png"></a>
+            </div>
+            <div class="bottom-navbar">
+                <ul class="bottom-navigation">
+                    <li><a href="#">Events</a></li>
+                    <li>|</li>
+                    <li><a href="#">Photos</a></li>
+                    <li>|</li>
+                    <li><a href="#">Home</a></li>
+                    <li>|</li>
+                    <li><a href="#">FAQs</a></li>
+                    <li>|</li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
 </html>
