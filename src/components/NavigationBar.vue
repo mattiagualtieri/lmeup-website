@@ -4,11 +4,11 @@
       <div class="container">
         <nav class="desktop-navigation">
           <ul class="navigation">
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#"><img src="../assets/logo.png" class="logo"></a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><router-link to="/contacts">Contacts</router-link></li>
+            <li><router-link to="/photos">Photos</router-link></li>
+            <li><router-link to="/"><img src="../assets/logo.png" class="logo"></router-link></li>
+            <li><router-link to="/FAQs">FAQs</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
           </ul>
         </nav>
         <nav class="mobile-navigation">
@@ -21,10 +21,11 @@
       <a href="javascript:void(0)" class="close-sidenav-button" v-on:click="closeSidenav"><font-awesome-icon :icon="['fa', 'xmark']" /></a>
       <div id="sidenav-link-container" class="sidenav-link-container">
         <ul class="sidenav-links">
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Photos</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><router-link to="/" v-on:click="closeSidenav">Home</router-link></li>
+          <li><router-link to="/contacts" v-on:click="closeSidenav">Contacts</router-link></li>
+          <li><router-link to="/photos" v-on:click="closeSidenav">Photos</router-link></li>
+          <li><router-link to="/FAQs" v-on:click="closeSidenav">FAQs</router-link></li>
+          <li><router-link to="/about" v-on:click="closeSidenav">About</router-link></li>
         </ul>
       </div>
     </div>
@@ -147,7 +148,7 @@ a {
     color: white;
     display: block;
     transition: 0.3s;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .sidenav .close-sidenav-button {
@@ -158,5 +159,7 @@ a {
 
 .sidenav-links {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 </style>
