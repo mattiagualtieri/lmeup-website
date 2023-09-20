@@ -5,15 +5,15 @@
         </div>
         <div class="bottom-navbar">
             <ul class="bottom-navigation">
-                <li><a href="#">Events</a></li>
+                <li><router-link to="/contacts">Contacts</router-link></li>
                 <li>|</li>
-                <li><a href="#">Photos</a></li>
+                <li><router-link to="/photos">Photos</router-link></li>
                 <li>|</li>
-                <li><a href="#">Home</a></li>
+                <li><router-link to="/">Home</router-link></li>
                 <li>|</li>
-                <li><a href="#">FAQs</a></li>
+                <li><router-link to="/FAQs">FAQs</router-link></li>
                 <li>|</li>
-                <li><a href="#">Contacts</a></li>
+                <li><router-link to="/about">About</router-link></li>
             </ul>
         </div>
     </div>

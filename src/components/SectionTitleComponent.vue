@@ -18,7 +18,7 @@ export default {
 .section-title {
     font-size: 24px;
     margin-left: 24px;
-    margin-top: 48px;
+    margin-top: 16px;
 }
 
 </style>

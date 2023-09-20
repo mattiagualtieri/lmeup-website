@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     border-radius: 30px;
+    margin-bottom: 64px;
 }
 
 video {

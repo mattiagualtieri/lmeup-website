@@ -3,9 +3,22 @@
     <SectionTitleComponent title="Upcoming events"/>
     <ComingSoonComponent/>
     <SectionTitleComponent title="Past events"/>
-    <EventComponent title="September LMEUP" date="08/09/2023" location="Modena, Via Tonini 5" banner_path="banner1" />
-    <EventComponent title="July LMEUP" date="21/07/2023" location="Modena, Via Tonini 5" banner_path="banner2" />
-    <EventComponent title="June LMEUP" date="09/06/2023" location="Modena, Via Tonini 5" banner_path="banner3" />
+    <EventComponent 
+        title="September LMEUP" 
+        date="08/09/2023" 
+        location="Modena, Via Tonini 5" 
+        banner="banner1" />
+    <EventComponent 
+        title="July LMEUP" 
+        date="21/07/2023" 
+        location="Modena, Via Tonini 5" 
+        banner="banner2" 
+        photo_url="https://drive.google.com/drive/mobile/folders/1QIypeI7sk53zdVJTWFO-AwaYPFXg3z6J?usp=sharing&fbclid=PAAaZvahPhM5dP06OFA7jp6i7p-B1hgCCCZYELIDKFHUXDVZje5zeolCC4Sh8"/>
+    <EventComponent 
+        title="June LMEUP" 
+        date="09/06/2023" 
+        location="Modena, Via Tonini 5" 
+        banner="banner3" />
     <SeeAllButtonComponent/>
     <FooterComponent/>
 </template>

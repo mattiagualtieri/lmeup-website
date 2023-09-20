@@ -16,7 +16,7 @@
                 </div>
                 <div class="buttons">
                     <button class="button white-button disabled">Leave a feedback</button>
-                    <button class="button green-button">See photos</button>
+                    <a :href="photo_url" target="_blank" class="button green-button">See photos</a>
                 </div>
             </div>
         </div>
@@ -30,11 +30,17 @@ export default {
         title: String,
         date: String,
         location: String,
-        banner_path: String
+        banner: String,
+        photo_url: String
     },
     computed: {
         classes () {
-            return this.banner_path;
+            return this.banner;
+        }
+    },
+    methods: {
+        setPhotoUrl() {
+
         }
     }
 }
