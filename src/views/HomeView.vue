@@ -7,7 +7,8 @@
         title="September LMEUP" 
         date="08/09/2023" 
         location="Modena, Via Tonini 5" 
-        banner="banner1" />
+        banner="banner1" 
+        photo_url="https://drive.google.com/drive/mobile/folders/1Tu9M8X1oQScTJtr_9iOYsWssSP5-SAdY?usp=sharing&fbclid=PAAaYcAajNDp5wVhzQCetY2lUfVnvNjFOo16qeWk_vp9WWnQnyVefqdKDgG6E" />
     <EventComponent 
         title="July LMEUP" 
         date="21/07/2023" 
@@ -18,7 +19,8 @@
         title="June LMEUP" 
         date="09/06/2023" 
         location="Modena, Via Tonini 5" 
-        banner="banner3" />
+        banner="banner3" 
+        photo_url="https://drive.google.com/drive/mobile/folders/1qzwqzbePEwxHWZ41J0hNqYhg6E8bcRps?fbclid=PAAaayX5X6PMaqWFq39YIZXP6OWP1L0LRmEc6rJGIqZRc2nkQpehF4MtOJrgw"/>
     <SeeAllButtonComponent/>
     <FooterComponent/>
 </template>

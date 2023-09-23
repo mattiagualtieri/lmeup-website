@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <div class="socials">
-            Follow us on Instagram <a href="#" class="instagram-link"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+            Follow us on Instagram <a href="https://instagram.com/lemilleeunapolli_?igshid=MzRlODBiNWFlZA==" class="instagram-link"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
         </div>
         <div class="bottom-navbar">
             <ul class="bottom-navigation">
@@ -26,6 +26,10 @@ export default {
 </script>
   
 <style scoped>
+
+.footer {
+    margin-top: 64px;
+}
 
 a {
     display: block;

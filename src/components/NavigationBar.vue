@@ -4,11 +4,11 @@
       <div class="container">
         <nav class="desktop-navigation">
           <ul class="navigation">
-            <li><router-link to="/contacts">Contacts</router-link></li>
-            <li><router-link to="/photos">Photos</router-link></li>
+            <li><router-link to="/events">Events</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
             <li><router-link to="/"><img src="../assets/logo.png" class="logo"></router-link></li>
             <li><router-link to="/FAQs">FAQs</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
+            <li><router-link to="/contacts">Contacts</router-link></li>
           </ul>
         </nav>
         <nav class="mobile-navigation">
@@ -22,10 +22,10 @@
       <div id="sidenav-link-container" class="sidenav-link-container">
         <ul class="sidenav-links">
           <li><router-link to="/" v-on:click="closeSidenav">Home</router-link></li>
-          <li><router-link to="/contacts" v-on:click="closeSidenav">Contacts</router-link></li>
-          <li><router-link to="/photos" v-on:click="closeSidenav">Photos</router-link></li>
-          <li><router-link to="/FAQs" v-on:click="closeSidenav">FAQs</router-link></li>
+          <li><router-link to="/events" v-on:click="closeSidenav">Events</router-link></li>
           <li><router-link to="/about" v-on:click="closeSidenav">About</router-link></li>
+          <li><router-link to="/FAQs" v-on:click="closeSidenav">FAQs</router-link></li>
+          <li><router-link to="/contacts" v-on:click="closeSidenav">Contacts</router-link></li>
         </ul>
       </div>
     </div>

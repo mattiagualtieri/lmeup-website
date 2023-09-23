@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import App from './App.vue'
 
 import HomeView from './views/HomeView.vue'
-import PhotosView from './views/PhotosView.vue'
+import EventsView from './views/EventsView.vue'
 import QuestionsView from './views/QuestionsView.vue'
 import ContactsView from './views/ContactsView.vue'
 import AboutView from './views/AboutView.vue'
@@ -21,10 +21,10 @@ library.add(faBars, faXmark, faInstagram)
 /* Routes */
 const routes = [
     { path: '/', component: HomeView },
-    { path: '/photos', component: PhotosView },
+    { path: '/events', component: EventsView },
+    { path: '/about', component: AboutView },
     { path: '/FAQs', component: QuestionsView },
     { path: '/contacts', component: ContactsView },
-    { path: '/about', component: AboutView },
 ]
 
 const router = createRouter({

@@ -2,19 +2,32 @@
     <div>
         <SectionTitleComponent title="Who we are"/>
         <div class="images">
-            <div class="image-container"><img src="../assets/about2.jpg"></div>
-            <div class="image-container"><img src="../assets/about1.jpg"></div>
+            <div class="image-container"><img src="../assets/about2.jpg" class="fadable"></div>
+            <div class="image-container"><img src="../assets/about1.jpg" class="fadable"></div>
         </div>
+        <SectionTitleComponent title="Why we do that"/>
+        <div class="images">
+            <div class="text-container fadable">
+                <p>
+                    Il nostro scopo principale è stato, sin dal primo evento organizzato nell'estate 2020, quello di far divertire le persone.
+                    <br>
+                    Tutto l'anno, lavoriamo al meglio insieme all'aiuto della Polisportiva Cognentese e a tutta la comunità di Cognento, per poter far vivere a chi partecipa alle nostre iniziative un'esperienza unica.
+                </p>
+            </div>
+        </div>
+        <FooterComponent/>
     </div>
 </template>
 
 <script>
 import SectionTitleComponent from '../components/SectionTitleComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue';
 
 export default {
     name: 'AboutView',
     components: {
-      SectionTitleComponent
+      SectionTitleComponent,
+      FooterComponent
     },
     mounted() {
       const elements = document.querySelectorAll(".fadable");
@@ -70,6 +83,27 @@ img {
     background-position: 50% 50%;
     width: 85%;
     height: auto;
+}
+
+.text-container {
+    text-align: left;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+p {
+    font-size: 24px;
+}
+
+@media (max-width: 850px) {
+    .images {
+        display: block;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-bottom: 48px;
+    }
 }
 
 </style>

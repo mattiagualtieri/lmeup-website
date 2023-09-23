@@ -1,6 +1,6 @@
 <template>
     <div class="past-events-button">
-        <button class="button white-button fadable">See all past events</button>
+        <router-link to="/events" class="button green-button">See all events</router-link>
     </div>
 </template>
   
@@ -18,7 +18,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -51,6 +51,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 52px;
+    margin-top: 52px;
 }
 
 </style>
