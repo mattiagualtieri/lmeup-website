@@ -88,6 +88,10 @@ export default {
     background-image: url('../assets/banner4.jpg');
 }
 
+.banner5 {
+    background-image: url('../assets/banner5.jpg');
+}
+
 .event-right-content {
     display: grid;
     width: 100%;
@@ -150,13 +154,13 @@ export default {
     color: black;
 }
 
-
+/*
 .white-button:hover {
     background-color: #006321;
     color: white; 
     border: 2px solid #006321;
 }
-
+*/
 
 .disabled {
     opacity: 0.6;
