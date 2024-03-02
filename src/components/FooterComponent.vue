@@ -1,13 +1,13 @@
 <template>
     <div class="footer">
         <div class="socials">
-            Follow us on Instagram <a href="https://instagram.com/lemilleeunapolli_?igshid=MzRlODBiNWFlZA==" class="instagram-link"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+            Seguici su Instagram <a href="https://instagram.com/lemilleeunapolli_?igshid=MzRlODBiNWFlZA==" class="instagram-link"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
         </div>
         <div class="bottom-navbar">
             <ul class="bottom-navigation">
-                <li><router-link to="/contacts">Contacts</router-link></li>
+                <li><router-link to="/contacts">Contatti</router-link></li>
                 <li>|</li>
-                <li><router-link to="/photos">Photos</router-link></li>
+                <li><router-link to="/photos">Foto</router-link></li>
                 <li>|</li>
                 <li><router-link to="/">Home</router-link></li>
                 <li>|</li>

@@ -1,22 +1,22 @@
 <template>
     <VideoComponent/>
-    <SectionTitleComponent title="Upcoming events"/>
+    <SectionTitleComponent title="Prossimi eventi"/>
     <ComingSoonComponent/>
-    <SectionTitleComponent title="Past events"/>
+    <SectionTitleComponent title="Eventi passati"/>
     <EventComponent 
-        title="September LMEUP" 
+        title="LMEUP di Settembre" 
         date="08/09/2023" 
         location="Modena, Via Tonini 5" 
         banner="banner1" 
         photo_url="https://drive.google.com/drive/mobile/folders/1Tu9M8X1oQScTJtr_9iOYsWssSP5-SAdY?usp=sharing&fbclid=PAAaYcAajNDp5wVhzQCetY2lUfVnvNjFOo16qeWk_vp9WWnQnyVefqdKDgG6E" />
     <EventComponent 
-        title="July LMEUP" 
+        title="LMEUP di Luglio" 
         date="21/07/2023" 
         location="Modena, Via Tonini 5" 
         banner="banner2" 
         photo_url="https://drive.google.com/drive/mobile/folders/1QIypeI7sk53zdVJTWFO-AwaYPFXg3z6J?usp=sharing&fbclid=PAAaZvahPhM5dP06OFA7jp6i7p-B1hgCCCZYELIDKFHUXDVZje5zeolCC4Sh8"/>
     <EventComponent 
-        title="June LMEUP" 
+        title="LMEUP di Giugno (💧)" 
         date="09/06/2023" 
         location="Modena, Via Tonini 5" 
         banner="banner3" 

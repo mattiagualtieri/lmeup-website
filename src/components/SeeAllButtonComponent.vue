@@ -1,6 +1,6 @@
 <template>
     <div class="past-events-button">
-        <router-link to="/events" class="button green-button">See all events</router-link>
+        <router-link to="/events" class="button green-button">Tutti gli eventi</router-link>
     </div>
 </template>
   

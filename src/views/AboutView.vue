@@ -1,17 +1,17 @@
 <template>
     <div>
-        <SectionTitleComponent title="Who we are"/>
+        <SectionTitleComponent title="Chi siamo"/>
         <div class="images">
             <div class="image-container"><img src="../assets/about2.jpg" class="fadable"></div>
             <div class="image-container"><img src="../assets/about1.jpg" class="fadable"></div>
         </div>
-        <SectionTitleComponent title="Why we do that"/>
+        <SectionTitleComponent title="Perché lo facciamo"/>
         <div class="images">
             <div class="text-container fadable">
                 <p>
-                    Il nostro scopo principale è stato, sin dal primo evento organizzato nell'estate 2020, quello di far divertire le persone.
+                    Pippone incredibile
                     <br>
-                    Tutto l'anno, lavoriamo al meglio insieme all'aiuto della Polisportiva Cognentese e a tutta la comunità di Cognento, per poter far vivere a chi partecipa alle nostre iniziative un'esperienza unica.
+                    Nico questo è il tuo spazio
                 </p>
             </div>
         </div>

@@ -15,8 +15,8 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="button white-button disabled">Leave a feedback</button>
-                    <a :href="photo_url" target="_blank" class="button green-button">See photos</a>
+                    <button class="button white-button disabled">Feedbacks</button>
+                    <a :href="photo_url" target="_blank" class="button green-button">Vai alle foto</a>
                 </div>
             </div>
         </div>
@@ -197,7 +197,7 @@ export default {
     }
     
     .event-title {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: bold;
     }
 
