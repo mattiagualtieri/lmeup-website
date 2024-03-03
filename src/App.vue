@@ -8,9 +8,10 @@ import NavigationBar from './components/NavigationBar.vue';
 
 export default {
   name: 'App',
+  title: 'LMEUP',
   components: {
     NavigationBar
-  },
+  }
 }
 </script>
 
