@@ -103,6 +103,10 @@ export default {
     background-image: url('../assets/banner8.jpg');
 }
 
+.banner9 {
+    background-image: url('../assets/banner9.png');
+}
+
 .event-right-content {
     display: grid;
     width: 100%;

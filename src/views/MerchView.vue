@@ -11,15 +11,6 @@
       <div class="button-container">
         <a href="https://shop.gibischool.it/s/le_mille_e_una_polli" target="https://shop.gibischool.it/s/le_mille_e_una_polli" class="button green-button">Vai allo shop</a>
       </div>
-      <SectionTitleComponent title="&quot;Il vecchio di Cog&quot;"/>
-      <div class="images">
-          <div class="text-container">
-              <p>
-                Maglietta rappresentante la famosa statua situata nel centro di Cognento. Un antico proverbio africano recita: "Vede più un vecchio seduto che un giovane in piedi".
-              </p>
-          </div>
-          <div class="image-container"><img src="../assets/tshirt1.jpeg" class="fadable"></div>
-      </div>
       <SectionTitleComponent title="&quot;Il 10 Cognento&quot;"/>
       <div class="images">
           <div class="text-container">
@@ -29,7 +20,25 @@
           </div>
           <div class="image-container"><img src="../assets/tshirt2.jpeg" class="fadable"></div>
       </div>
-      <SectionTitleComponent title="&quot;Il Pigugnino&quot;"/>
+      <SectionTitleComponent title="&quot;Date LMEUP&quot;"/>
+      <div class="images">
+          <div class="text-container">
+              <p>
+                Maglietta celebrativa per i 5 anny di LMEUP, solo coloro che hanno partecipato a tutte le date hanno l'onore di poter acquistarla (si scherza, è disponibile per tutti). #CinqueAnniDiNoi
+              </p>
+          </div>
+          <div class="image-container"><img src="../assets/tshirt7.jpg" class="fadable"></div>
+      </div>
+      <SectionTitleComponent title="&quot;Il vecchio di Cog&quot; (SOLD OUT)"/>
+      <div class="images">
+          <div class="text-container">
+              <p>
+                Maglietta rappresentante la famosa statua situata nel centro di Cognento. Un antico proverbio africano recita: "Vede più un vecchio seduto che un giovane in piedi".
+              </p>
+          </div>
+          <div class="image-container"><img src="../assets/tshirt1.jpeg" class="fadable"></div>
+      </div>
+      <SectionTitleComponent title="&quot;Il Pigugnino&quot; (SOLD OUT)"/>
       <div class="images">
           <div class="text-container">
               <p>
@@ -43,6 +52,10 @@
           <div class="image-container"><img src="../assets/tshirt4.jpeg" class="fadable"></div>
       </div>
       <SectionTitleComponent title="&quot;Cognento classic #2&quot;"/>
+      <div class="images">
+          <div class="image-container"><img src="../assets/tshirt8.jpg" class="fadable"></div>
+      </div>
+      <SectionTitleComponent title="&quot;Cognento classic #3&quot; (SOLD OUT)"/>
       <div class="images">
           <div class="image-container"><img src="../assets/tshirt5.jpeg" class="fadable"></div>
       </div>
