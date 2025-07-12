@@ -1,15 +1,36 @@
 <template>
     <div class="video">
-        <video muted="" autoplay="" loop="" playsinline="" controls="" poster="">
-            <source src="../assets/video.mp4" type="video/mp4">
+        <video muted autoplay loop playsinline controls poster="">
+            <source :src="videoSrc" type="video/mp4">
         </video>
     </div>
 </template>
   
 <script>
-    export default {
-        name: 'VideoComponent'
+export default {
+    name: 'VideoComponent',
+    data() {
+        return {
+            videoSrc: ''
+        }
+    },
+    methods: {
+        updateVideoSrc() {
+            if (window.innerWidth <= 850) {
+                this.videoSrc = require('../assets/video2.mp4');
+            } else {
+                this.videoSrc = require('../assets/video.mp4');
+            }
+        }
+    },
+    mounted() {
+        this.updateVideoSrc();
+        window.addEventListener('resize', this.updateVideoSrc);
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.updateVideoSrc);
     }
+}
 </script>
   
 <style scoped>
@@ -34,4 +55,3 @@ video {
 }
 
 </style>
-  

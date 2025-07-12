@@ -1,10 +1,11 @@
 <template>
     <VideoComponent />
     <SectionTitleComponent title="Prossimi eventi" />
-    <!--ComingSoonComponent /-->
-    <ComingEventComponent title="LMEUP di Giugno " date="13/06/2025" location="Modena, Via Tonini 5"
-        banner="banner9" info_url="https://www.instagram.com/p/DKHWKsSMcRY/" />
+    <ComingSoonComponent />
     <SectionTitleComponent title="Eventi passati" />
+    <EventComponent title="LMEUP di Giugno" date="13/06/2025" location="Modena, Via Tonini 5" banner="banner10"
+        photo_url="https://drive.google.com/drive/folders/1CcaTZG1PzhQnoS8RCjbnKb2Lj2WI92at" 
+        feedback_url="https://docs.google.com/forms/d/e/1FAIpQLScTRn4xqiiTeIDIU_P9erBRNsCwiPeoAxr-f4mLuwcKv7Mnlw/viewform?usp=header" />
     <ComingEventComponent title="Torneo di Beach Volley " date="24/05/2025" location="Modena, Via Tonini 5"
         banner="banner6" info_url="#" />
     <EventComponent title="LMEUP di Settembre" date="06/09/2024" location="Modena, Via Tonini 5" banner="banner8"
@@ -26,7 +27,7 @@
 <script>
 import VideoComponent from '../components/VideoComponent.vue'
 import SectionTitleComponent from '../components/SectionTitleComponent.vue'
-// import ComingSoonComponent from '../components/ComingSoonComponent.vue'
+import ComingSoonComponent from '../components/ComingSoonComponent.vue'
 import ComingEventComponent from '../components/ComingEventComponent.vue'
 import EventComponent from '../components/EventComponent.vue'
 import SeeAllButtonComponent from '../components/SeeAllButtonComponent.vue'
@@ -37,7 +38,7 @@ export default {
     components: {
         VideoComponent,
         SectionTitleComponent,
-        // ComingSoonComponent,
+        ComingSoonComponent,
         ComingEventComponent,
         EventComponent,
         SeeAllButtonComponent,

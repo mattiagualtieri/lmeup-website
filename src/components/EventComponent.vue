@@ -15,7 +15,8 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="button white-button disabled">Feedbacks</button>
+                    <a v-if="feedback_url" :href="feedback_url" target="_blank" class="button white-button">Feedbacks</a>
+                    <button v-else class="button white-button disabled" disabled>Feedbacks</button>
                     <a :href="photo_url" target="_blank" class="button green-button">Vai alle foto</a>
                 </div>
             </div>
@@ -31,16 +32,15 @@ export default {
         date: String,
         location: String,
         banner: String,
-        photo_url: String
+        photo_url: String,
+        feedback_url: {
+            type: String,
+            default: ''
+        }
     },
     computed: {
         classes () {
             return this.banner;
-        }
-    },
-    methods: {
-        setPhotoUrl() {
-
         }
     }
 }
@@ -102,6 +102,10 @@ export default {
 
 .banner8 {
     background-image: url('../assets/banner8.jpg');
+}
+
+.banner10 {
+    background-image: url('../assets/banner10.jpg');
 }
 
 .event-right-content {
