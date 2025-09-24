@@ -3,6 +3,9 @@
     <SectionTitleComponent title="Prossimi eventi" />
     <ComingSoonComponent />
     <SectionTitleComponent title="Eventi passati" />
+    <EventComponent title="LMEUP di Settembre" date="12/09/2025" location="Modena, Via Tonini 5" banner="banner11"
+        photo_url="https://drive.google.com/drive/folders/1Kvl4pIm7Jr62A9ZrlWUIs-beXMUHwimM" 
+        feedback_url="https://docs.google.com/forms/d/e/1FAIpQLSdVyHJj-EwtwYlJ6XkrFGIQte5uAwmrjEf-YfAIBkE6CaqIPQ/viewform?usp=header" />
     <EventComponent title="LMEUP di Giugno" date="13/06/2025" location="Modena, Via Tonini 5" banner="banner10"
         photo_url="https://drive.google.com/drive/folders/1CcaTZG1PzhQnoS8RCjbnKb2Lj2WI92at" 
         feedback_url="https://docs.google.com/forms/d/e/1FAIpQLScTRn4xqiiTeIDIU_P9erBRNsCwiPeoAxr-f4mLuwcKv7Mnlw/viewform?usp=header" />
